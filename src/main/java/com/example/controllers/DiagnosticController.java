@@ -8,12 +8,12 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
-@Tag(name = "Діагностика", description = "Ендпоїнти для перевірки роботи API")
+@Tag(name = "Diagnostics", description = "Check")
 public class DiagnosticController {
 
     @GetMapping("/health")
-    @Operation(summary = "Перевірити стан сервісу", description = "Повертає статус 200 ОК, якщо сервіс працює нормально")
+    @Operation(summary = "Check", description = "Returns 200 if okay")
     public ResponseEntity<String> healthCheck() {
-        return ResponseEntity.ok("Сервіс працює нормально");
+        return ResponseEntity.ok("Service works");
     }
 }
